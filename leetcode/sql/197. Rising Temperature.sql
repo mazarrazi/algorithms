@@ -51,4 +51,14 @@ join Weather w2
 on DATE_ADD(w2.recordDate, Interval 1 Day) = w1.recordDate 
 where w1.temperature > w2.temperature
 
+'expln,
+w1 6 w2 are aliases for same table.
 
+w1 represents todays data.
+w2 represents yesterdays data.
+ 
+ON DATE_ADD(w2.recordDate, INTERVAL 1 DAY) = w1.recordDate
+This condition ensures that we only pair rows where w2.recordDate + 1 day equals w1.recordDate.
+This creates a relationship where w2 represents the data from the previous day (yesterday). 
+
+so next is comparing today & previous day temp'
