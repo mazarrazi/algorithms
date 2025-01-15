@@ -52,7 +52,7 @@ on DATE_ADD(w2.recordDate, Interval 1 Day) = w1.recordDate
 where w1.temperature > w2.temperature
 
 'expln,
-w1 6 w2 are aliases for same table.
+w1 & w2 are aliases for same table.
 
 w1 represents todays data.
 w2 represents yesterdays data.
